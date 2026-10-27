@@ -163,12 +163,60 @@
     content:"";position:absolute;left:50%;bottom:3px;transform:translateX(-50%);
     width:56%;height:5px;border-bottom:2.5px solid var(--accent);border-radius:0 0 60% 60%/0 0 100% 100%;
   }
+
+  /* ===== profile view ===== */
+  #view-profile[hidden]{display:none}
+  .pf-head{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+  .pf-av{
+    width:64px;height:64px;border-radius:18px;flex:none;color:var(--accent-dark);
+    background:linear-gradient(145deg,#bdeedd,var(--mint));border:2px solid #fff;
+    box-shadow:0 0 0 4px var(--mint-2),0 8px 16px rgba(18,163,127,.28);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .pf-id{flex:1;min-width:0;line-height:1.35}
+  .pf-id b{display:block;font-size:17px;font-weight:700}
+  .pf-vip{display:inline-flex;align-items:center;gap:5px;font-size:15px;font-weight:700;color:var(--accent-dark)}
+  .pf-bell{
+    width:44px;height:44px;border-radius:50%;border:1px solid #d6e5e0;background:#fff;cursor:pointer;color:var(--dark);
+    display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(11,42,36,.10);
+  }
+  .pf-wallet{
+    background:#fff;border:1px solid var(--border);border-radius:16px;padding:12px 12px 6px;margin-bottom:20px;
+    box-shadow:0 8px 20px rgba(11,42,36,.12);
+  }
+  .pf-bal{
+    position:relative;overflow:hidden;border-radius:12px;padding:14px 16px;margin-bottom:12px;color:#fff;
+    background:linear-gradient(135deg,var(--accent-dark),#0a5e4b);
+    border:2px solid #7ad9bf;box-shadow:0 0 0 3px rgba(18,163,127,.18),0 8px 16px rgba(11,42,36,.2);
+  }
+  .pf-bal::before,.pf-bal::after{
+    content:"";position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,.28);pointer-events:none;
+  }
+  .pf-bal::before{width:170px;height:170px;right:-50px;top:-90px}
+  .pf-bal::after{width:210px;height:210px;right:-110px;bottom:-150px}
+  .pf-bal small{display:block;font-size:14px;font-weight:600;opacity:.92;position:relative}
+  .pf-bal strong{display:block;font-size:30px;font-weight:700;line-height:1.25;position:relative}
+  .pf-stats{display:grid;grid-template-columns:repeat(3,1fr);row-gap:2px}
+  .pf-stats div{text-align:center;padding:8px 2px 10px;min-width:0}
+  .pf-stats div:nth-child(n+4){border-top:1px solid #e1e7e5}
+  .pf-stats span{display:block;font-size:13px;font-weight:600;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .pf-stats b{display:block;font-size:18px;font-weight:700;color:var(--accent-dark)}
+  .pf-list{display:flex;flex-direction:column;gap:12px;margin-top:2px}
+  .pf-list a{
+    display:flex;align-items:center;justify-content:space-between;gap:8px;text-decoration:none;color:var(--text);
+    background:#fff;border:1px solid var(--border);border-radius:12px;padding:0 14px;height:52px;
+    font-size:17px;font-weight:600;box-shadow:0 6px 14px rgba(11,42,36,.08);
+    transition:background .15s;
+  }
+  .pf-list a:active{background:var(--mint-2)}
+  .pf-list svg{color:#8b9693;flex:none}
 </style>
 </head>
 <body>
 <main class="page">
 <div class="inner">
 
+  <div id="view-home">
   <!-- Banner carousel -->
   <div class="slides" id="slides">
     <div class="slide">
@@ -236,6 +284,49 @@
   </div>
 
   <div id="devices"></div>
+
+  </div>
+
+  <!-- Profile view -->
+  <div id="view-profile" hidden>
+    <div class="pf-head">
+      <div class="pf-av"><svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></div>
+      <div class="pf-id">
+        <b>পরিচয় সংখ্যা: ৫৮৯৯৩৮০</b>
+        <span class="pf-vip"><svg width="20" height="20" viewBox="0 0 24 24" fill="#12a37f" stroke="#0b7d62" stroke-width="1.2" stroke-linejoin="round"><path d="M6 3h12l4 6-10 12L2 9z"/><path d="M2 9h20M9 3 7 9l5 12 5-12-2-6" fill="none" stroke="#fff" stroke-width="1"/></svg>বিশিষ্ট স্তর ০</span>
+      </div>
+      <button class="pf-bell" type="button" aria-label="বিজ্ঞপ্তি"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 2h-15z"/><path d="M10 21h4"/></svg></button>
+    </div>
+
+    <div class="pf-wallet">
+      <div class="pf-bal"><small>মোট সঞ্চয়</small><strong>৳ ০.০০</strong></div>
+      <div class="pf-stats">
+        <div><span>কর্মক্ষেত্রের আয়</span><b>৳ ০.০০</b></div>
+        <div><span>দলীয় প্রাপ্য</span><b>৳ ০.০০</b></div>
+        <div><span>দলীয় লভ্যাংশ</span><b>৳ ০.০০</b></div>
+        <div><span>আজকের অর্জন</span><b>৳ ০.০০</b></div>
+        <div><span>মোট জমা</span><b>৳ ০.০০</b></div>
+        <div><span>মোট উত্তোলন</span><b>৳ ০.০০</b></div>
+      </div>
+    </div>
+
+    <div class="menu">
+      <a href="#"><div class="ci"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M8 5V3.5h8V5M12 16v-6m0 0-2.6 2.6M12 10l2.6 2.6"/></svg></div><span>জমা করুন</span></a>
+      <a href="#"><div class="ci"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M8 5V3.5h8V5M12 10v6m0 0-2.6-2.6M12 16l2.6-2.6"/></svg></div><span>উত্তোলন</span></a>
+      <a href="#"><div class="ci"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3 20v-1a5 5 0 0 1 5-5h2a5 5 0 0 1 5 5v1M16 4.8a3.2 3.2 0 0 1 0 6.4M18.5 14.3A5 5 0 0 1 21.5 19v1"/></svg></div><span>সঙ্গীগণ</span></a>
+      <a href="#"><div class="ci"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.8v2.4M12 18.8v2.4M2.8 12h2.4M18.8 12h2.4M5.5 5.5l1.7 1.7M16.8 16.8l1.7 1.7M5.5 18.5l1.7-1.7M16.8 7.2l1.7-1.7"/></svg></div><span>বিন্যাস</span></a>
+    </div>
+
+    <div class="pf-list">
+      <a href="#"><span>সাধারণ হিসাবপত্র</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg></a>
+      <a href="#"><span>জমার বিবরণী</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg></a>
+      <a href="#"><span>প্রাপ্য কমিশন</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg></a>
+      <a href="#"><span>লভ্যাংশ</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg></a>
+      <a href="#"><span>উত্তোলনের বিবরণী</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg></a>
+      <a href="#"><span>কর্মক্ষেত্রের মুনাফা</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg></a>
+      <a href="#"><span>অ্যাপ সংগ্রহ করুন</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg></a>
+    </div>
+  </div>
 
 </div>
 </main>
@@ -335,6 +426,9 @@
       tabs.forEach(function(t){ t.classList.remove('on'); t.removeAttribute('aria-current'); });
       a.classList.add('on');
       a.setAttribute('aria-current', 'page');
+      var isProfile = Array.prototype.indexOf.call(tabs, a) === 4;
+      document.getElementById('view-profile').hidden = !isProfile;
+      document.getElementById('view-home').hidden = isProfile;
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   });

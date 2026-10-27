@@ -7,15 +7,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#eef5f2;
+    --bg:#eff3f7;
     --card:#ffffff;
     --text:#000000;
     --muted:#374151;
     --border:#b8bfc9;
-    --accent:#12a37f;
-    --accent-dark:#0b7d62;
-    --dark:#0b2a24;
-    --link:#0b8f6e;
+    --accent:#0471f4;
+    --accent-dark:#0052b6;
+    --dark:#003376;
+    --link:#003b9a;
     --error:#d64545;
     --ok:#1f9d6b;
   }
@@ -30,16 +30,16 @@
     width:100%;max-width:430px;min-height:100vh;background:var(--card);
     position:relative;overflow:hidden;
     padding:0 26px 40px;
-    box-shadow:0 0 40px rgba(11,42,36,.08);
+    box-shadow:0 0 40px rgba(0,51,118,.08);
   }
   .page::before{
     content:"";position:absolute;inset:0 0 auto 0;height:190px;
-    background:linear-gradient(160deg,#d5f3ea 0%,#effaf6 55%,#fff 100%);
+    background:linear-gradient(160deg,#dde7f2 0%,#f3f6fa 55%,#fff 100%);
     z-index:0;
   }
   .page::after{
     content:"";position:absolute;top:-70px;right:-70px;width:200px;height:200px;border-radius:50%;
-    border:1px solid rgba(18,163,127,.25);box-shadow:0 0 0 24px rgba(18,163,127,.06);
+    border:1px solid rgba(4,113,244,.25);box-shadow:0 0 0 24px rgba(4,113,244,.06);
     z-index:0;
   }
   .inner{position:relative;z-index:1;padding-top:max(30px,env(safe-area-inset-top))}
@@ -47,11 +47,11 @@
   .sub{text-align:center;font-size:16px;font-weight:500;color:var(--muted);margin:2px 0 14px}
   .logo{
     width:68px;height:68px;margin:0 auto 24px;display:block;
-    filter:drop-shadow(0 8px 14px rgba(18,163,127,.35));
+    filter:drop-shadow(0 8px 14px rgba(4,113,244,.35));
   }
 
   .brand{
-    text-align:center;font-size:24px;font-weight:700;letter-spacing:.3px;color:#08493b;
+    text-align:center;font-size:24px;font-weight:700;letter-spacing:.3px;color:#001e51;
     margin:-12px 0 22px;
   }
   .field{
@@ -59,7 +59,7 @@
     border:1px solid var(--border);border-radius:8px;background:#fff;
     transition:border-color .15s,box-shadow .15s;
   }
-  .field:focus-within{border-color:var(--accent);box-shadow:0 0 0 3px rgba(18,163,127,.18)}
+  .field:focus-within{border-color:var(--accent);box-shadow:0 0 0 3px rgba(4,113,244,.18)}
   .field.invalid{border-color:var(--error);box-shadow:0 0 0 3px rgba(214,69,69,.12)}
   .field .ico{
     width:44px;height:100%;display:flex;align-items:center;justify-content:center;
@@ -102,10 +102,10 @@
   .submit{
     width:100%;height:50px;margin-top:4px;border:0;border-radius:8px;
     background:var(--dark);color:#fff;font:inherit;font-size:20px;font-weight:700;cursor:pointer;
-    box-shadow:0 6px 16px rgba(11,42,36,.25);transition:transform .1s,box-shadow .15s;
+    box-shadow:0 6px 16px rgba(0,51,118,.25);transition:transform .1s,box-shadow .15s;
   }
-  .submit:active{transform:translateY(1px);box-shadow:0 3px 8px rgba(11,42,36,.25)}
-  .login{display:block;text-align:center;margin-top:16px;font-size:17px;font-weight:600;color:#08705a;text-decoration:none}
+  .submit:active{transform:translateY(1px);box-shadow:0 3px 8px rgba(0,51,118,.25)}
+  .login{display:block;text-align:center;margin-top:16px;font-size:17px;font-weight:600;color:#002d78;text-decoration:none}
   .login:hover{text-decoration:underline}
   .msg{font-size:16px;font-weight:500;color:var(--error);text-align:center;margin-top:10px;min-height:18px}
   .msg.ok{color:var(--ok)}
@@ -119,7 +119,7 @@
   <!-- Placeholder logo: replace with your own -->
   <svg class="logo" viewBox="0 0 64 64" role="img" aria-label="Logo" xmlns="http://www.w3.org/2000/svg">
     <defs>
-      <linearGradient id="lg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#19c29a"/><stop offset="1" stop-color="#0a6e57"/></linearGradient>
+      <linearGradient id="lg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0053db"/><stop offset="1" stop-color="#002d78"/></linearGradient>
       <linearGradient id="lg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe08a"/><stop offset="1" stop-color="#f2a93b"/></linearGradient>
     </defs>
     <path d="M32 3 56 17v30L32 61 8 47V17z" fill="url(#lg1)"/>

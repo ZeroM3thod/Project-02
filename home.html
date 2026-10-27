@@ -2,7 +2,7 @@
 <html lang="bn">
 <head>
 <meta charset="UTF-8">
-<meta name="theme-color" content="#5ca381">
+<meta name="theme-color" content="#0471f4">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>মূল আঙিনা | Your Platform</title>
 <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,34 +14,34 @@
     --border:#b8bfc9;
     --gold:#f2a93b;
     --hot:#e5472f;
-    --k1:#1b6b4b;
-    --dark:#1c5a43;
-    --k2:#1f4d3b;
-    --k3:#26694f;
-    --accent-dark:#278f62;
-    --k4:#356b55;
-    --accent:#3dbb83;
-    --k5:#6fd3a2;
-    --k6:#7f9a8d;
-    --k7:#a8e6c6;
-    --k8:#c3efd9;
-    --k9:#cfe2d8;
-    --k10:#cfeadb;
-    --k11:#d0f1e1;
-    --k12:#d5e8dd;
-    --k13:#d9eee2;
-    --mint:#d9f5e6;
-    --k14:#dcece3;
-    --k15:#dfeee5;
-    --k16:#e0f4ea;
-    --k17:#e4f2ea;
-    --k18:#e6f4ec;
-    --k19:#e8f5ee;
-    --k20:#ebf9f2;
-    --bg:#eef8f2;
-    --mint-2:#f2fbf6;
-    --accent-rgb:61,187,131;
-    --dark-rgb:28,90,67;
+    --k1:#003b86;
+    --dark:#003376;
+    --k2:#0a3062;
+    --k3:#083f87;
+    --accent-dark:#0052b6;
+    --k4:#1d4a83;
+    --accent:#0471f4;
+    --k5:#439bff;
+    --k6:#738ba6;
+    --k7:#8fc5ff;
+    --k8:#c9d8ea;
+    --k9:#d1d8e0;
+    --k10:#d2dce7;
+    --k11:#d4e0ed;
+    --k12:#d7dfe6;
+    --k13:#dce3eb;
+    --mint:#dde7f2;
+    --k14:#dee4ea;
+    --k15:#e1e7ec;
+    --k16:#e3eaf2;
+    --k17:#e6ebf0;
+    --k18:#e8edf2;
+    --k19:#eaeef3;
+    --k20:#edf2f7;
+    --bg:#eff3f7;
+    --mint-2:#f3f6fa;
+    --accent-rgb:4,113,244;
+    --dark-rgb:0,51,118;
   }
   
   *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
@@ -235,74 +235,7 @@
   .pf-list a:active{background:var(--mint-2)}
   .pf-list svg{color:var(--k6);flex:none}
 
-  /* ===== colour palette ===== */
-  .pal-btn{
-    position:fixed;right:max(14px,calc(50% - 215px + 14px));bottom:148px;z-index:20;
-    width:46px;height:46px;border-radius:50%;border:2px solid #fff;cursor:pointer;color:var(--dark);
-    background:conic-gradient(from 200deg,#ea6a8f,#f2a93b,#8ccf6a,#3fb7c9,#6b7de8,#b46be0,#ea6a8f);
-    box-shadow:0 8px 18px rgba(var(--dark-rgb),.28);
-    display:flex;align-items:center;justify-content:center;
-  }
-  .pal-btn i{width:22px;height:22px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
-  .pal-pop{
-    position:fixed;right:max(14px,calc(50% - 215px + 14px));bottom:204px;z-index:40;width:244px;
-    background:#fff;border:1px solid var(--border);border-radius:16px;padding:12px 12px 10px;
-    box-shadow:0 14px 34px rgba(var(--dark-rgb),.28);
-    transform-origin:100% 100%;transition:opacity .18s,transform .18s;
-  }
-  .pal-pop[hidden]{display:block;opacity:0;transform:scale(.9);pointer-events:none;visibility:hidden}
-  .pal-pop h5{font-size:15px;font-weight:700;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center}
-  .pal-pop h5 button{border:0;background:var(--mint);color:var(--accent-dark);width:24px;height:24px;border-radius:50%;font-size:15px;line-height:1;cursor:pointer}
-  .pal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px 4px}
-  .pal-grid button{
-    border:0;background:none;cursor:pointer;font:inherit;color:var(--text);
-    display:flex;flex-direction:column;align-items:center;gap:4px;padding:0;min-width:0;
-  }
-  .pal-grid .sw{
-    width:38px;height:38px;border-radius:50%;border:3px solid #fff;position:relative;
-    box-shadow:0 0 0 1.5px #cfd6d3,0 4px 8px rgba(0,0,0,.14);transition:transform .15s;
-    display:flex;align-items:center;justify-content:center;color:#fff;
-  }
-  .pal-grid button:active .sw{transform:scale(.9)}
-  .pal-grid button.on .sw{box-shadow:0 0 0 2.5px var(--accent-dark),0 4px 8px rgba(0,0,0,.18)}
-  .pal-grid .sw svg{opacity:0;width:18px;height:18px}
-  .pal-grid button.on .sw svg{opacity:1}
-  .pal-grid span.n{font-size:11.5px;font-weight:600;white-space:nowrap}
-  .pal-grid .custom .sw{background:conic-gradient(#ea6a8f,#f2a93b,#8ccf6a,#3fb7c9,#6b7de8,#b46be0,#ea6a8f);overflow:hidden}
-  .pal-grid .custom input{position:absolute;inset:-6px;width:60px;height:60px;opacity:0;cursor:pointer}
 </style>
-<script>
-// ---- theme engine: the page is drawn with the original palette; every colour is re-tinted from it ----
-var BASE = {"k1": "#1b6b4b", "dark": "#1c5a43", "k2": "#1f4d3b", "k3": "#26694f", "accent-dark": "#278f62", "k4": "#356b55", "accent": "#3dbb83", "k5": "#6fd3a2", "k6": "#7f9a8d", "k7": "#a8e6c6", "k8": "#c3efd9", "k9": "#cfe2d8", "k10": "#cfeadb", "k11": "#d0f1e1", "k12": "#d5e8dd", "k13": "#d9eee2", "mint": "#d9f5e6", "k14": "#dcece3", "k15": "#dfeee5", "k16": "#e0f4ea", "k17": "#e4f2ea", "k18": "#e6f4ec", "k19": "#e8f5ee", "k20": "#ebf9f2", "bg": "#eef8f2", "mint-2": "#f2fbf6"};
-var THEMES = [
-  { id:'shyamal',  name:'শ্যামল',   h:150, s:.55 },
-  { id:'pudina',   name:'পুদিনা',   h:154, s:1 },
-  { id:'niloy',    name:'নীলাঞ্জন', h:214, s:.95 },
-  { id:'jarul',    name:'জারুল',    h:266, s:.85 },
-  { id:'golap',    name:'গোলাপ',    h:338, s:.85 },
-  { id:'arun',     name:'অরুণ',     h:22,  s:1 },
-  { id:'sagor',    name:'সাগর',     h:187, s:.9 }
-];
-function hex2hsl(x){var r=parseInt(x.substr(1,2),16)/255,g=parseInt(x.substr(3,2),16)/255,b=parseInt(x.substr(5,2),16)/255,
-  mx=Math.max(r,g,b),mn=Math.min(r,g,b),l=(mx+mn)/2,h=0,s=0,d=mx-mn;
-  if(d){s=l>.5?d/(2-mx-mn):d/(mx+mn);h=mx==r?(g-b)/d+(g<b?6:0):mx==g?(b-r)/d+2:(r-g)/d+4;h*=60}return[h,s,l]}
-function hsl2rgb(h,s,l){h=((h%360)+360)%360/360;function f(p,q,t){t=(t+1)%1;return t<1/6?p+(q-p)*6*t:t<1/2?q:t<2/3?p+(q-p)*(2/3-t)*6:p}
-  if(!s){var v=Math.round(l*255);return[v,v,v]}var q=l<.5?l*(1+s):l+s-l*s,p=2*l-q;
-  return[f(p,q,h+1/3),f(p,q,h),f(p,q,h-1/3)].map(function(c){return Math.round(c*255)})}
-function toHex(a){return'#'+a.map(function(c){return('0'+c.toString(16)).slice(-2)}).join('')}
-function tint(hex,t){var a=hex2hsl(hex);return hsl2rgb(t.h+(a[0]-154)*.35,Math.min(1,a[1]*t.s),a[2])}
-function applyTheme(t){
-  var st=document.documentElement.style;
-  for(var k in BASE){st.setProperty('--'+k,toHex(tint(BASE[k],t)))}
-  st.setProperty('--accent-rgb',tint(BASE.accent,t).join(','));
-  st.setProperty('--dark-rgb',tint(BASE.dark,t).join(','));
-  var m=document.querySelector('meta[name=theme-color]'); if(m) m.content=toHex(tint(BASE.accent,t));
-}
-function themeFromColor(hex){var a=hex2hsl(hex);return{id:'custom',h:a[0],s:Math.max(.3,Math.min(1.6,a[1]/.5))}}
-var saved=null; try{saved=JSON.parse(localStorage.getItem('theme-v1'))}catch(e){}
-var CUR = saved && saved.h!=null ? saved : THEMES[0];
-applyTheme(CUR);
-</script>
 </head>
 <body>
 <main class="page">
@@ -427,12 +360,6 @@ applyTheme(CUR);
   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>
 </button>
 
-<button class="pal-btn" id="palBtn" type="button" aria-label="রঙ বাছাই" aria-expanded="false" aria-controls="palPop"><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 0 18c1.4 0 2-1 1.6-2.2-.4-1.2.3-2.3 1.6-2.3H17a4 4 0 0 0 4-4C21 6.7 17 3 12 3z"/><circle cx="7.5" cy="11" r="1"/><circle cx="10" cy="7" r="1"/><circle cx="15" cy="7.5" r="1"/></svg></i></button>
-<div class="pal-pop" id="palPop" role="dialog" aria-label="রঙ বাছাই" hidden>
-  <h5>রঙ বাছাই <button type="button" id="palClose" aria-label="বন্ধ করুন">×</button></h5>
-  <div class="pal-grid" id="palGrid"></div>
-</div>
-
 <nav class="tabs" aria-label="মূল সূচি">
   <a href="#" class="on">
     <div class="ni"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.8 2.4 11.2a.8.8 0 0 0 .5 1.4H5V20a1.2 1.2 0 0 0 1.2 1.2H9.5V15h5v6.2h3.3A1.2 1.2 0 0 0 19 20v-7.4h2.1a.8.8 0 0 0 .5-1.4z"/></svg></div><span>মূল আঙিনা</span>
@@ -531,34 +458,6 @@ applyTheme(CUR);
     });
   });
   document.querySelector('nav.tabs a.on').setAttribute('aria-current', 'page');
-  // ---- colour palette ----
-  (function(){
-    var grid=document.getElementById('palGrid'), pop=document.getElementById('palPop'), btn=document.getElementById('palBtn');
-    var tick='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>';
-    function mark(){
-      grid.querySelectorAll('button').forEach(function(b){b.classList.toggle('on', b.getAttribute('data-id')===CUR.id)});
-    }
-    function pick(t){
-      CUR=t; applyTheme(t); mark();
-      try{localStorage.setItem('theme-v1',JSON.stringify(t))}catch(e){}
-    }
-    THEMES.forEach(function(t){
-      var b=document.createElement('button'); b.type='button'; b.setAttribute('data-id',t.id);
-      b.innerHTML='<span class="sw" style="background:linear-gradient(135deg,'+toHex(tint(BASE.accent,t))+','+toHex(tint(BASE['accent-dark'],t))+')">'+tick+'</span><span class="n">'+t.name+(t.id==='shyamal'?' ✦':'')+'</span>';
-      b.addEventListener('click',function(){pick(t)});
-      grid.appendChild(b);
-    });
-    var c=document.createElement('button'); c.type='button'; c.className='custom'; c.setAttribute('data-id','custom');
-    c.innerHTML='<span class="sw">'+tick+'<input type="color" value="'+toHex(tint(BASE.accent,CUR))+'" aria-label="নিজের পছন্দের রঙ"></span><span class="n">নিজস্ব</span>';
-    c.querySelector('input').addEventListener('input',function(e){pick(themeFromColor(e.target.value))});
-    grid.appendChild(c);
-    mark();
-    function open(o){pop.hidden=!o;btn.setAttribute('aria-expanded',o?'true':'false')}
-    btn.addEventListener('click',function(e){e.stopPropagation();open(pop.hidden)});
-    document.getElementById('palClose').addEventListener('click',function(){open(false)});
-    document.addEventListener('click',function(e){if(!pop.hidden&&!pop.contains(e.target))open(false)});
-    document.addEventListener('keydown',function(e){if(e.key==='Escape')open(false)});
-  })();
 </script>
 </body>
 </html>
